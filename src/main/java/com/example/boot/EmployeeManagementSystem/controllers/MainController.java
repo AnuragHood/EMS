@@ -20,14 +20,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-@RequestMapping(value = "home")
 public class MainController {
     private static Logger logger = LogManager.getLogger(MainController.class);
     @Autowired
     EmpServiceImpl service;
     Employee emp = new Employee();
 
-    @GetMapping("/show")
+    @GetMapping("/")
     public ModelAndView addEmployee() {
         logger.info("inside show method GET......>>>");
         return new ModelAndView("home");
