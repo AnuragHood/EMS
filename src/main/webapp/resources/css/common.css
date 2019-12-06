@@ -117,3 +117,8 @@ input:focus {
     font-size: 120px !important;
 
 }
+.navbar-toggler-icon{
+	color: #fff !important;
+    background-color: #17a2b8 !important;
+    border-color: #17a2b8 !important;
+}
