@@ -3,6 +3,7 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<c:set var="contextPath" value="${pageContext.request.contextPath}"/>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -26,6 +27,7 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
           crossorigin="anonymous">
+    <link href="${contextPath}/resources/css/common.css" rel="stylesheet">
     <style>
         input[type=search], input[type=password], input[type=text] {
             border: 2px solid steelblue;
@@ -33,22 +35,6 @@
             background-color: #ADD8E6;
             color: black;
             font-weight: 300;
-        }
-
-        body {
-            font-size: 0.9em;
-            font-weight: 700;
-            font-style: normal;
-            font-family: cursive;
-            font-variant: normal;
-            background: no-repeat center center fixed;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-size: 100% 100vh;
-            background-color: black;
         }
 
         .bg-info, .list-group-item-action, .list-group-item, i {
@@ -149,9 +135,7 @@
             transform: scale(1.01);
         }
 
-        .bg-dark {
-            background-color: #343A71 !important;
-        }
+
     </style>
 </head>
 <body ng-app="empApp" id="appBody" ng-init="previous=0;next=10">
@@ -161,8 +145,11 @@
     <!-- Sidebar -->
     <div class="bg-dark border-right" id="sidebar-wrapper">
         <div class="sidebar-heading " style="color: white">
-            <img src="${pageContext.request.contextPath}/resources/employee.svg"
-                 alt="Employee"> EMS
+            <i data-toggle="tooltip"
+               data-placement="top"
+               title="Welcome to EMS"
+               class="material-icons red-tooltip mainIcon">
+                group_add </i> &nbsp;&nbsp;&nbsp;<span class="mailIcon">EMS</span>
         </div>
         <div class="list-group list-group-flush">
             <a href="#addEmp"
@@ -195,13 +182,32 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <c:if test="${pageContext.request.userPrincipal.name != null}">
+                            <a class="nav-link" href="#" style="color:white">
+
+                                <i data-toggle="tooltip"
+                                   data-placement="top"
+                                   title="Welcome ${pageContext.request.userPrincipal.name}"
+                                   class="material-icons red-tooltip">
+                                    tag_faces</i>&nbsp; Welcome &nbsp;${pageContext.request.userPrincipal.name}</a>
+                        </c:if>
+                    </li>
                     <li class="nav-item active"><a class="nav-link"
                                                    href="/employee/home/show#/home"><i data-toggle="tooltip"
                                                                                        data-placement="top"
                                                                                        title="Go to Home"
-                                                                                       class=" material-icons red-tooltip">
+                                                                                       class="material-icons red-tooltip">
                         home </i> <span
                             class="sr-only">(current)</span></a></li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="${contextPath}/logout" style="color:white"><i
+                                data-toggle="tooltip"
+                                data-placement="top"
+                                title="Logout from EMS"
+                                class="material-icons red-tooltip">
+                            directions_run</i></a>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -209,13 +215,6 @@
         <div class="container-fluid">
 
             <div class="container">
-                <c:if test="${pageContext.request.userPrincipal.name != null}">
-                    <form id="logoutForm" method="POST" action="${contextPath}/logout">
-                        <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
-                    </form>
-
-                    <h2>Welcome ${pageContext.request.userPrincipal.name} | <a onclick="document.forms['logoutForm'].submit()">Logout</a></h2>
-                </c:if>
                 <div id="spinnerShow" class="hide">
                     <div class="spinner-grow text-primary" role="status">
                         <span class="sr-only">Loading...</span>
@@ -365,7 +364,7 @@
                                 <div class="form-group col-sm-6">
                                     <label for="firstName">FirstName</label>
                                     <input type="search" class="form-control form-control-sm" ng-model="firstName"
-                                           placeholder="First Name" name="firstName"  required>
+                                           placeholder="First Name" name="firstName" required>
                                     <span ng-model="firstNameError" class="validationError"
                                           ng-show="firstNameErrorShow">{{firstNameError}} </span>
                                 </div>

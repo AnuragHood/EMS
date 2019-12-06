@@ -1,0 +1,118 @@
+body {
+    background-color: #ddd !important;
+    font-size: 0.9em;
+    font-weight: 700;
+    font-style: normal;
+    font-family: sans-serif;
+    font-variant: normal;
+    background: no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-size: 100% 100vh;
+}
+
+.centered-form {
+    margin-top: 60px;
+}
+
+.centered-form .panel {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: rgba(0, 0, 0, 0.3) 20px 20px 20px;
+}
+
+.card {
+    border: 1.5px solid #000000;
+}
+
+.card-login {
+    margin-top: 50px;
+    padding: 18px;
+    max-width: 30rem;
+}
+
+.card-header {
+    color: #fff;
+    /*background: #ff0000;*/
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600 !important;
+    margin-top: 10px;
+    border-bottom: 0;
+}
+
+.input-group-prepend span {
+    width: 50px;
+    background-color: #000000;
+    color: #fff;
+    border: 0 !important;
+}
+
+input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+
+.login_btn:hover {
+    color: #fff;
+    background-color: green;
+}
+
+.btn-outline-danger {
+    color: #fff;
+    font-size: 18px;
+    background-color: #000000;
+    background-image: none;
+    border-color: #89CFF0;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #000000;
+    background-color: transparent;
+    background-clip: padding-box;
+    border: 1px solid #89CFF0;
+    border-radius: 0;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.input-group-text {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 0.375rem 0.75rem;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.6;
+    color: #495057;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    border-radius: 0;
+}
+
+.material-icons {
+    vertical-align: middle !important;
+    font-size: 35px !important;
+}
+
+.mainIcon {
+    font-size: 80px !important;
+}
+
+.loginLogo {
+    color: black !important;
+    font-size: 120px !important;
+
+}
