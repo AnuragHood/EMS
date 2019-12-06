@@ -23,7 +23,7 @@
                 <div class="panel-body">
                     <form:form method="POST" modelAttribute="userForm" class="form-signin">
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-12">
+                            <div class="col-xs-6 col-sm-12 col-md-12">
                                 <spring:bind path="username">
                                 <div class="form-group ${status.error ? 'has-error' : ''}">
                                     <form:input type="text" path="username" class="form-control" placeholder="Username"
@@ -34,7 +34,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-12">
+                            <div class="col-xs-6 col-sm-12 col-md-12">
                                 <spring:bind path="password">
                                 <div class="form-group ${status.error ? 'has-error' : ''}">
                                     <form:input type="password" path="password" class="form-control" placeholder="Password"></form:input>
@@ -44,7 +44,7 @@
                             </div>
                         </div>
                             <div class="row">
-                            <div class="col-xs-6 col-sm-6 col-md-12">
+                            <div class="col-xs-6 col-sm-12 col-md-12">
                                 <spring:bind path="passwordConfirm">
                                     <div class="form-group ${status.error ? 'has-error' : ''}">
                                         <form:input type="password" path="passwordConfirm" class="form-control"
