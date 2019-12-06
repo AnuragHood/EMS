@@ -102,12 +102,13 @@ input:focus {
     border-radius: 0;
 }
 
-.material-icons {
+.menuItems {
     vertical-align: middle !important;
     font-size: 35px !important;
 }
 
 .mainIcon {
+	vertical-align: middle !important;
     font-size: 80px !important;
 }
 

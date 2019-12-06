@@ -134,6 +134,9 @@
         .homeEmp:hover {
             transform: scale(1.01);
         }
+        label {
+	color:black;
+}
 
 
     </style>
@@ -189,7 +192,7 @@
                                 <i data-toggle="tooltip"
                                    data-placement="top"
                                    title="Welcome ${pageContext.request.userPrincipal.name}"
-                                   class="material-icons red-tooltip">
+                                   class="material-icons menuItems red-tooltip">
                                     tag_faces</i>&nbsp; Welcome &nbsp;${pageContext.request.userPrincipal.name}</a>
                         </c:if>
                     </li>
@@ -197,7 +200,7 @@
                                                    href="/employee/home/show#/home"><i data-toggle="tooltip"
                                                                                        data-placement="top"
                                                                                        title="Go to Home"
-                                                                                       class="material-icons red-tooltip">
+                                                                                       class="material-icons menuItems red-tooltip">
                         home </i> <span
                             class="sr-only">(current)</span></a></li>
                     <li class="nav-item active">
@@ -205,7 +208,7 @@
                                 data-toggle="tooltip"
                                 data-placement="top"
                                 title="Logout from EMS"
-                                class="material-icons red-tooltip">
+                                class="material-icons menuItems red-tooltip">
                             directions_run</i></a>
                     </li>
                 </ul>
@@ -403,17 +406,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">City</label>
-                                    <input type="search" class="form-control form-control-sm" ng-model="inputCity">
+                                    <input type="search" placeholder="Your City" class="form-control form-control-sm" ng-model="inputCity">
                                     <span ng-model="cityError" class="validationError" ng-show="cityErrorShow">{{cityError}} </span>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputState">State</label>
-                                    <input type="search" class="form-control form-control-sm" ng-model="inputState">
+                                    <input type="search"  placeholder="Your State" class="form-control form-control-sm" ng-model="inputState">
                                     <span ng-model="stateError" class="validationError" ng-show="stateErrorShow">{{stateError}} </span>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip">Zip</label>
-                                    <input type="search" class="form-control form-control-sm" ng-model="inputZip">
+                                    <input type="search"  placeholder="Your zip code" class="form-control form-control-sm" ng-model="inputZip">
                                     <span ng-model="zipError" class="validationError" ng-show="zipErrorShow">{{zipError}} </span>
                                 </div>
                             </div>
