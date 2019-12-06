@@ -406,17 +406,17 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="inputCity">City</label>
-                                    <input type="search" placeholder="Your City" class="form-control form-control-sm" ng-model="inputCity">
+                                    <input type="search" placeholder="City" class="form-control form-control-sm" ng-model="inputCity">
                                     <span ng-model="cityError" class="validationError" ng-show="cityErrorShow">{{cityError}} </span>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <label for="inputState">State</label>
-                                    <input type="search"  placeholder="Your State" class="form-control form-control-sm" ng-model="inputState">
+                                    <input type="search"  placeholder="State" class="form-control form-control-sm" ng-model="inputState">
                                     <span ng-model="stateError" class="validationError" ng-show="stateErrorShow">{{stateError}} </span>
                                 </div>
                                 <div class="form-group col-md-2">
                                     <label for="inputZip">Zip</label>
-                                    <input type="search"  placeholder="Your zip code" class="form-control form-control-sm" ng-model="inputZip">
+                                    <input type="search"  placeholder="zip code" class="form-control form-control-sm" ng-model="inputZip">
                                     <span ng-model="zipError" class="validationError" ng-show="zipErrorShow">{{zipError}} </span>
                                 </div>
                             </div>
